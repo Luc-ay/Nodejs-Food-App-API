@@ -4,6 +4,7 @@ const {
   createResturant,
   getAllResturantController,
   getResturantByID,
+  deleteResturant,
 } = require('../controllers/resturantControllers')
 
 const resturantRoutes = express.Router()
@@ -19,6 +20,6 @@ resturantRoutes.get('/getAll', getAllResturantController)
 resturantRoutes.get('/getAll/:id', getResturantByID)
 
 // DELETE RESTURANT
-resturantRoutes.delete('/delte/:id', authMiddleware)
+resturantRoutes.delete('/delte/:id', authMiddleware, deleteResturant)
 
 module.exports = resturantRoutes

@@ -140,4 +140,5 @@ module.exports = {
   createResturant,
   getAllResturantController,
   getResturantByID,
+  deleteResturant,
 }

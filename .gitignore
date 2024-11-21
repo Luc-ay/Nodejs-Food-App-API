@@ -1,5 +1,7 @@
 .env
-
+/controllers/foodControllers.js
+/routes/foodRoutes.js
+/models/foodModels.js
 data.js
 package-lock.json
 /node_modules
