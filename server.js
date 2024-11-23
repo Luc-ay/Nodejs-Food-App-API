@@ -6,6 +6,7 @@ const routee = require('./routes/userRoutes')
 const route = require('./routes/authRoutes')
 const resturantRoutes = require('./routes/resturantRoutes')
 const categoryRoutes = require('./routes/categoryRoutes')
+const foodRoute = require('./routes/foodRoutes')
 
 const app = express()
 
@@ -23,6 +24,7 @@ app.use('/auth', route)
 app.use('/user', routee)
 app.use('/resturant', resturantRoutes)
 app.use('/category', categoryRoutes)
+app.use('/food', foodRoute)
 app.get('/', (req, res) => {
   res.status(200).send(`<h1>Welcome to Food App Server</h1>`)
 })
