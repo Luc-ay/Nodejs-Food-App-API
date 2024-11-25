@@ -51,6 +51,7 @@ const createResturant = async (req, res) => {
     res.status(500).send({
       success: false,
       message: 'Error in create resturant API',
+      error: error.message,
     })
   }
 }

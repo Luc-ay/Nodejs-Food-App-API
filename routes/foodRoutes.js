@@ -6,6 +6,8 @@ const {
   singleFood,
   resturantFood,
   updateFood,
+  deleteFood,
+  orderFood,
 } = require('../controllers/foodControllers')
 
 const foodRoute = express.Router()
@@ -25,6 +27,12 @@ foodRoute.get('/:id', singleFood)
 foodRoute.get('/resturant/:id', resturantFood)
 
 // Update Food
-foodRoute.get('/update/:id', authMiddleware, updateFood)
+foodRoute.put('/update/:id', authMiddleware, updateFood)
+
+// Delete Food
+foodRoute.delete('/delete/:id', authMiddleware, deleteFood)
+
+// Place Order
+foodRoute.post('/order', authMiddleware, orderFood)
 
 module.exports = foodRoute

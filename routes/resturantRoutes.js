@@ -17,9 +17,9 @@ resturantRoutes.post('/createResturant', authMiddleware, createResturant)
 resturantRoutes.get('/getAll', getAllResturantController)
 
 // Get Resturant By ID
-resturantRoutes.get('/getAll/:id', getResturantByID)
+resturantRoutes.get('/get/:id', getResturantByID)
 
 // DELETE RESTURANT
-resturantRoutes.delete('/delte/:id', authMiddleware, deleteResturant)
+resturantRoutes.delete('/delete/:id', authMiddleware, deleteResturant)
 
 module.exports = resturantRoutes
